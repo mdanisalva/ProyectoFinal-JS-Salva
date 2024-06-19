@@ -2,9 +2,7 @@
 mostrarReservas();
 
 // Ejemplo de uso de fetch para obtener datos de una API
-//fetch('https://api.example.com/data')
-//fetch('https://api.github.com/users/manishmshiva')
-fetch('https://pokeapi.co/api/v2/pokemon/150')
+fetch('js/datos.json')
     .then(response => response.json())
     .then(data => {
         console.log('Datos obtenidos:', data);
