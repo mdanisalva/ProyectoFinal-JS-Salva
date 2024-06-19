@@ -1,6 +1,26 @@
+[
+{
+    "nombrePasajero": "Juan",
+    "destino": 30,
+    "fechaVuelo": "Buenos Aires",
+    "asiento":"A10"
+},
+{
+    "nombrePasajero": "Juan",
+    "destino": 30,
+    "fechaVuelo": "Buenos Aires",
+    "asiento":"A10"
+},
+{
+    "nombrePasajero": "Juan",
+    "destino": 30,
+    "fechaVuelo": "Buenos Aires",
+    "asiento":"A10"
+},
 {
     "nombrePasajero": "Juan",
     "destino": 30,
     "fechaVuelo": "Buenos Aires",
     "asiento":"A10"
 }
+]
