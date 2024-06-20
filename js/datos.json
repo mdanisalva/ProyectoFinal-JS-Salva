@@ -1,26 +1,26 @@
 [
 {
     "nombrePasajero": "Juan",
-    "destino": 30,
-    "fechaVuelo": "Buenos Aires",
+    "destino": "Buenos Aires",
+    "fechaVuelo": "2024-06-20",
     "asiento":"A10"
 },
 {
-    "nombrePasajero": "Juan",
-    "destino": 30,
-    "fechaVuelo": "Buenos Aires",
-    "asiento":"A10"
+    "nombrePasajero": "Ariana",
+    "destino": "Miami",
+    "fechaVuelo": "2024-06-23",
+    "asiento":"A12"
 },
 {
-    "nombrePasajero": "Juan",
-    "destino": 30,
-    "fechaVuelo": "Buenos Aires",
-    "asiento":"A10"
+    "nombrePasajero": "Daniel",
+    "destino": "Barcelona",
+    "fechaVuelo": "2024-07-24",
+    "asiento":"B12"
 },
 {
-    "nombrePasajero": "Juan",
-    "destino": 30,
-    "fechaVuelo": "Buenos Aires",
-    "asiento":"A10"
+    "nombrePasajero": "Sol",
+    "destino": "Rio de janeiro",
+    "fechaVuelo": "2024-10-27",
+    "asiento":"C12"
 }
 ]

@@ -1,12 +1,28 @@
 // Obtener la lista de reservas desde localStorage (si existe)
 const listaGuardada = localStorage.getItem('listaReservas');
 const listaReservas = listaGuardada ? JSON.parse(listaGuardada) : [];
+let reservasGuardadas = [];
+
+
+// Ejemplo de uso de fetch para obtener datos de un archivo JSON
+fetch('js/datos.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Datos obtenidos:', data);
+        reservasGuardadas=data;
+        mostrarReservas();
+    })
+    .catch(error => {
+        console.error('Error al obtener datos:', error);
+    });
+
+
 
 function reservaExitosa() {
             Swal.fire({
                 title: "Su reserva fue exitosa!!",
                 icon: "success",
-                timer: 2000,
+                timer: 1500,
                 timerProgressBar: true,
                 didOpen: () => {
                     Swal.showLoading();
@@ -25,15 +41,18 @@ function reservaExitosa() {
             });
 }
 
-
-
-
-
-
 // Mostrar las reservas en el DOM
 function mostrarReservas() {
     const lista = document.getElementById('listaReservas');
     lista.innerHTML = ''; // Limpiar la lista antes de volver a mostrar
+    
+    reservasGuardadas.forEach((reservasJSON) => {
+        const li = document.createElement('li');
+        li.textContent = `${reservasJSON.nombrePasajero} viajará a ${reservasJSON.destino} el ${reservasJSON.fechaVuelo} en el asiento ${reservasJSON.asiento}`;
+        lista.appendChild(li);
+    });
+
+
 
     listaReservas.forEach((reserva) => {
         const li = document.createElement('li');
