@@ -3,26 +3,12 @@ const listaGuardada = localStorage.getItem('listaReservas');
 const listaReservas = listaGuardada ? JSON.parse(listaGuardada) : [];
 let reservasGuardadas = [];
 function reservaExitosa() {
-            Swal.fire({
-                title: "Su reserva fue exitosa!!",
-                icon: "success",
-                timer: 1500,
-                timerProgressBar: true,
-                didOpen: () => {
-                    Swal.showLoading();
-                    const timer = Swal.getPopup().querySelector("b");
-                    timerInterval = setInterval(() => {
-                        timer.textContent = `${Swal.getTimerLeft()}`;
-                    }, 100);
-                },
-                willClose: () => {
-                    clearInterval(timerInterval);
-                }
-            }).then((result) => {
-                if (result.dismiss === Swal.DismissReason.timer) {
-                    console.log("Fue cerrada por el timer");
-                }
-            });
+    Swal.fire({
+        icon: "success",
+        title: "Su reserva fue exitosa",
+        showConfirmButton: false,
+        timer: 1500
+      });
 }
 
 function cambiarFormatoFecha(fecha) {
